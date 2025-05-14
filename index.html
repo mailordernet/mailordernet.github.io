@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>サーチツール</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./style.css">
+    </head>
+
+    <body>
+        <div class="wrapper">
+            <div class="container">
+
+                <!-- Google Search -->
+                <section class="srch-mod srch-mod-google">
+                    <h2 class="srch-mod__title">Google Search</h2>
+                    <div class="srch-mod__actions">
+                        <input type="text" name="googlesword" placeholder="キーワードを入力" autocomplete="off" autofocus speech><input type="submit" value="検索" id="googleSearchBtn">
+                    </div>
+                    <div class="srch-mod__choices">
+                        <input type="radio" name="googlesrch" value="noperiod" id="quick-noperiod" checked><label for="quick-noperiod">期間指定なし</label>
+                        <input type="radio" name="googlesrch" value="h1" id="quick-d1"><label for="quick-d1">1日以内</label>
+                        <input type="radio" name="googlesrch" value="d1" id="quick-w1"><label for="quick-w1">1週間以内</label>
+                        <input type="radio" name="googlesrch" value="w1" id="quick-m1"><label for="quick-m1">1ヶ月以内</label>
+                        <input type="radio" name="googlesrch" value="y1" id="quick-y1"><label for="quick-y1">1年以内</label>
+                        <details>
+                            <summary>他の検索期間を指定する</summary>
+                            <div><input type="radio" name="googlesrch" value="h1" id="h1"><label for="h1">1時間以内</label><input type="radio" name="googlesrch" value="h3" id="h3"><label for="h3">3時間以内</label><input type="radio" name="googlesrch" value="h6" id="h6"><label for="h6">6時間以内</label><input type="radio" name="googlesrch" value="h12" id="h12"><label for="h12">12時間以内</label><input type="radio" name="googlesrch" value="h15" id="h15"><label for="h15">15時間以内</label><input type="radio" name="googlesrch" value="h18" id="h18"><label for="h18">18時間以内</label><input type="radio" name="googlesrch" value="h21" id="h21"><label for="h21">21時間以内</label></div>
+                            <div><input type="radio" name="googlesrch" value="d1" id="d1"><label for="d1">1日以内</label><input type="radio" name="googlesrch" value="d2" id="d2"><label for="d2">2日以内</label><input type="radio" name="googlesrch" value="d3" id="d3"><label for="d3">3日以内</label><input type="radio" name="googlesrch" value="d4" id="d4"><label for="d4">4日以内</label><input type="radio" name="googlesrch" value="d5" id="d5"><label for="d5">5日以内</label><input type="radio" name="googlesrch" value="d6" id="d6"><label for="d6">6日以内</label></div>
+                            <div><input type="radio" name="googlesrch" value="w1" id="w1"><label for="w1">1週間以内</label><input type="radio" name="googlesrch" value="w2" id="w2"><label for="w2">2週間以内</label><input type="radio" name="googlesrch" value="w3" id="w3"><label for="w3">3週間以内</label><input type="radio" name="googlesrch" value="w4" id="w4"><label for="w4">4週間以内</label></div>
+                            <div><input type="radio" name="googlesrch" value="m1" id="m1"><label for="m1">1ヶ月以内</label><input type="radio" name="googlesrch" value="m2" id="m2"><label for="m2">2ヶ月以内</label><input type="radio" name="googlesrch" value="m3" id="m3"><label for="m3">3ヶ月以内</label><input type="radio" name="googlesrch" value="m4" id="m4"><label for="m4">4ヶ月以内</label><input type="radio" name="googlesrch" value="m5" id="m5"><label for="m5">5ヶ月以内</label><input type="radio" name="googlesrch" value="m6" id="m6"><label for="m6">6ヶ月以内</label><input type="radio" name="googlesrch" value="m7" id="m7"><label for="m7">7ヶ月以内</label><input type="radio" name="googlesrch" value="m8" id="m8"><label for="m8">8ヶ月以内</label><input type="radio" name="googlesrch" value="m9" id="m9"><label for="m9">9ヶ月以内</label><input type="radio" name="googlesrch" value="m10" id="m10"><label for="m10">10ヶ月以内</label><input type="radio" name="googlesrch" value="m11" id="m11"><label for="m11">11ヶ月以内</label></div>
+                            <div><input type="radio" name="googlesrch" value="y1" id="y1"><label for="y1">1年以内</label><input type="radio" name="googlesrch" value="y2" id="y2"><label for="y2">2年以内</label><input type="radio" name="googlesrch" value="y3" id="y3"><label for="y3">3年以内</label><input type="radio" name="googlesrch" value="y4" id="y4"><label for="y4">4年以内</label><input type="radio" name="googlesrch" value="y5" id="y5"><label for="y5">5年以内</label></div>
+                        </details>
+                    </div>
+                </section>
+
+                <!-- Site Search -->
+                <section class="srch-mod srch-mod-site">
+                    <h2 class="srch-mod__title">Site Search</h2>
+                    <div class="srch-mod__actions">
+                        <input type="text" name="sitesword" placeholder="キーワードを入力" autocomplete="off" speech><input type="submit" value="検索" id="siteSearchBtn">
+                    </div>
+                    <div class="srch-mod__choices">
+                        <div><input type="radio" name="sitesrch" value="x" id="x" checked><label for="x">X</label></div>
+                        <div><input type="radio" name="sitesrch" value="youtube" id="youtube"><label for="youtube">YouTube</label><input type="radio" name="sitesrch" value="tver" id="tver"><label for="tver">TVer</label><input type="radio" name="sitesrch" value="abema" id="abema"><label for="abema">ABEMA</label><input type="radio" name="sitesrch" value="primevideo" id="primevideo"><label for="primevideo">Prime Video</label><input type="radio" name="sitesrch" value="hulu" id="hulu"><label for="hulu">Hulu</label><input type="radio" name="sitesrch" value="unext" id="unext"><label for="unext">U-NEXT</label></div>
+                        <div><input type="radio" name="sitesrch" value="amazon" id="Amazon"><label for="Amazon">Amazon</label><input type="radio" name="sitesrch" value="kindle" id="kindle"><label for="kindle">Kindle</label><input type="radio" name="sitesrch" value="rakutenichiba" id="rakutenichiba"><label for="rakutenichiba">楽天市場</label><input type="radio" name="sitesrch" value="yahooshopping" id="yahooshopping"><label for="yahooshopping">Yahoo!ショッピング</label><input type="radio" name="sitesrch" value="yodobashidotcom" id="yodobashidotcom"><label for="yodobashidotcom">ヨドバシ.com</label><input type="radio" name="sitesrch" value="daiso" id="daiso"><label for="daiso">DAISO</label><input type="radio" name="sitesrch" value="temu" id="temu"><label for="temu">Temu</label></div>
+                        <div><input type="radio" name="sitesrch" value="kikkoman" id="kikkoman"><label for="kikkoman">キッコーマン</label><input type="radio" name="sitesrch" value="rakutenrecipe" id="rakutenrecipe"><label for="rakutenrecipe">楽天レシピ</label><input type="radio" name="sitesrch" value="shirogohandotcom" id="shirogohandotcom"><label for="shirogohandotcom">白ごはん.com</label><input type="radio" name="sitesrch" value="delishkitchen" id="delishkitchen"><label for="delishkitchen">デリッシュキッチン</label></div>
+                    </div>
+                </section>
+
+                <!-- Dict Search -->
+                <section class="srch-mod srch-mod-dict">
+                    <h2 class="srch-mod__title">Dict Search</h2>
+                    <div class="srch-mod__actions">
+                        <input type="text" name="dictsword" placeholder="キーワードを入力" autocomplete="off" speech><input type="submit" value="検索"  id="dictSearchBtn">
+                    </div>
+                    <div class="srch-mod__choices">
+                        <div><input type="radio" name="dictsrch" value="wikipedia" id="wikipedia" checked><label for="wikipedia">WikiPedia</label><input type="radio" name="dictsrch" value="dictkokugo" id="dictkokugo"><label for="dictkokugo">国語辞典</label><input type="radio" name="dictsrch" value="dicteiwawaei" id="dicteiwawaei"><label for="dicteiwawaei">英和・和英辞典</label><input type="radio" name="dictsrch" value="dictruigo" id="dictruigo"><label for="dictruigo">類語辞典</label><input type="radio" name="dictsrch" value="dicttaigigo" id="dicttaigigo"><label for="dicttaigigo">対義語辞典</label><input type="radio" name="dictsrch" value="dictkotowaza" id="dictkotowaza"><label for="dictkotowaza">ことわざ辞典</label><input type="radio" name="dictsrch" value="dict4jijukugo" id="dict4jijukugo"><label for="dict4jijukugo">四字熟語辞典</label></div>                            
+                    </div>
+                </section>
+            </div>
+        </div>        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script>
+            $(function () {
+
+                // Google Search
+                $('#googleSearchBtn').click(function() {
+                    // 選ばれた期間を取得
+                    var selectedPeriod = $('input[name="googlesrch"]:checked').val();
+                    
+                    // 入力されたキーワードを取得
+                    var keyword = $('input[name="googlesword"]').val();
+
+                    if (!keyword) {
+                        alert('キーワードを入力してください。');
+                        return;
+                    }
+                    
+                    // クエリを作成（Google検索のURLとして仮定）
+                    var searchQuery = 'https://www.google.com/search?q=' + encodeURIComponent(keyword) + '&tbs=qdr:' + selectedPeriod;
+                    
+                    // 現在のタブで検索を表示
+                    window.location.href = searchQuery; // 現在のタブで開く
+
+                });
+
+
+                // Site Search
+                $('#siteSearchBtn').click(function(e) {
+                    e.preventDefault();
+            
+                    const keyword = $('input[name="sitesword"]').val().trim();
+                    const site = $('input[name="sitesrch"]:checked').val();
+            
+                    if (!keyword) {
+                        alert('キーワードを入力してください');
+                        return;
+                    }
+            
+                    if (!site) {
+                        alert('検索対象サイトを選んでください');
+                        return;
+                    }
+            
+                    let url = '';
+            
+                    switch (site) {
+                        case 'x':
+                            url = `https://twitter.com/search?q=${encodeURIComponent(keyword)}`;
+                            break;
+                        case 'youtube':
+                            url = `https://www.youtube.com/results?search_query=${encodeURIComponent(keyword)}`;
+                            break;
+                        case 'tver':
+                            url = `https://tver.jp/search/${encodeURIComponent(keyword)}`;
+                            break;
+                        case 'abema':
+                            url = `https://abema.tv/search?q=${encodeURIComponent(keyword)}`;
+                            break;
+                        case 'primevideo':
+                            url = `https://www.amazon.co.jp/s?k=${encodeURIComponent(keyword)}&i=instant-video`;
+                            break;
+                        case 'hulu':
+                            url = `https://www.hulu.jp/search?q=${encodeURIComponent(keyword)}`;
+                            break;
+                        case 'unext':
+                            url = `https://video.unext.jp/freeword?query=${encodeURIComponent(keyword)}`;
+                            break;
+                        case 'amazon':
+                            url = `https://www.amazon.co.jp/s?k=${encodeURIComponent(keyword)}`;
+                            break;
+                        case 'kindle':
+                            url = `https://www.amazon.co.jp/s?k=${encodeURIComponent(keyword)}&i=digital-text`;
+                            break;
+                        case 'rakutenichiba':
+                            url = `https://search.rakuten.co.jp/search/mall/${encodeURIComponent(keyword)}/`;
+                            break;
+                        case 'yahooshopping':
+                            url = `https://shopping.yahoo.co.jp/search?p=${encodeURIComponent(keyword)}`;
+                            break;
+                        case 'yodobashidotcom':
+                            url = `https://www.yodobashi.com/?word=${encodeURIComponent(keyword)}`;
+                            break;
+                        case 'daiso':
+                            url = `https://jp.daisonet.com/search?q=${encodeURIComponent(keyword)}`;
+                            break;
+                        case 'temu':
+                            url = `https://www.temu.com/search_result.html?search_key=${encodeURIComponent(keyword)}`;
+                            break;
+                        case 'kikkoman':
+                            url = `https://www.kikkoman.co.jp/homecook/search/select_search.html?kw=${encodeURIComponent(keyword)}&env=kikkoman&temp=ja&directory%5B%5D=homecook`;
+                            break;
+                        case 'rakutenrecipe':
+                            url = `https://recipe.rakuten.co.jp/search/${encodeURIComponent(keyword)}/`;
+                            break;
+                        case 'shirogohandotcom':
+                            url = `https://www.sirogohan.com/recipe/index/keyword:${encodeURIComponent(keyword)}`;
+                            break;
+                        case 'delishkitchen':
+                            url = `https://delishkitchen.tv/search?q=${encodeURIComponent(keyword)}`;
+                            break;
+                        default:
+                            alert('対応していないサイトです');
+                            return;
+                    }
+            
+                    window.location.href = url; // 現在のタブで開く
+                });
+
+
+                // Dict Search
+                $('#dictSearchBtn').click(function (e) {
+                    const dictUrls = {
+                        wikipedia: word => `https://ja.wikipedia.org/wiki/${encodeURIComponent(word)}`,
+                        dictkokugo: word => `https://www.weblio.jp/content/${encodeURIComponent(word)}`,
+                        dicteiwawaei: word => `https://ejje.weblio.jp/content/${encodeURIComponent(word)}`,
+                        dictruigo: word => `https://thesaurus.weblio.jp/content/${encodeURIComponent(word)}`,
+                        dicttaigigo: word => `https://thesaurus.weblio.jp/antonym/content/${encodeURIComponent(word)}`,
+                        dictkotowaza: word => `https://kotowaza.jitenon.jp/cat/search.php?getdata=${encodeURIComponent(word)}`,
+                        dict4jijukugo: word => `https://yoji.jitenon.jp/cat/search?getdata=${encodeURIComponent(word)}`
+                    };
+
+
+                    const word = $('input[name="dictsword"]').val().trim();
+                    const selectedDict = $('input[name="dictsrch"]:checked').val();
+
+                    if (!word) {
+                        alert('キーワードを入力してください。');
+                        return;
+                    }
+
+                    const urlBuilder = dictUrls[selectedDict];
+                    if (!urlBuilder) {
+                        alert('選択された辞書に対応するURLがありません。');
+                        return;
+                    }
+
+                    const url = urlBuilder(word);
+                    window.location.href = url; // 現在のタブで開く
+                });
+
+
+                // Enterキー対応(Google Search)
+                $('input[name="googlesword"]').keypress(function (e) {
+                    if (e.which === 13) { // Enterキーのコード
+                        $('#googleSearchBtn').click(); // ボタンのclickイベントを発火
+                        return false; // フォームのsubmitを防止
+                    }
+                });
+
+                // Enterキー対応(Site Search)
+                $('input[name="sitesword"]').keypress(function (e) {
+                    if (e.which === 13) { // Enterキーのコード
+                        $('#siteSearchBtn').click(); // ボタンのclickイベントを発火
+                        return false; // フォームのsubmitを防止
+                    }
+                });
+
+                // Enterキー対応(Dict Search)
+                $('input[name="dictsword"]').keypress(function (e) {
+                    if (e.which === 13) { // Enterキーのコード
+                        $('#dictSearchBtn').click(); // ボタンのclickイベントを発火
+                        return false; // フォームのsubmitを防止
+                    }
+                }); 
+            });
+        </script>
+    </body>
+</html>

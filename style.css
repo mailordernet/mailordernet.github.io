@@ -1,0 +1,171 @@
+input[type=radio]{display:none;}/* ラジオボタンを非表示 */
+
+html{
+    font-size: 62.5%; /* ← 16px × 62.5% = 10px */
+    font-family: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', sans-serif;
+    color: #202020;
+}
+
+body{
+    font-size: 1.6rem;
+    background: #202020 url("https://www.transparenttextures.com/patterns/carbon-fibre.png") repeat center;
+}
+
+.wrapper{
+
+}
+.container{
+    border-radius: 5px;
+    background: #2f2f2f url("https://www.transparenttextures.com/patterns/carbon-fibre.png") repeat center;
+    background-size: 24px 22px;
+    margin: 40px;
+    padding: 40px;
+}
+
+
+/* module */
+.srch-mod{
+    user-select: none;
+    margin: 40px auto;
+}
+.srch-mod:first-child{
+    margin-top: 0;
+}
+
+
+/* タイトル */
+.srch-mod__title{
+    font-size: 2.0rem;
+    font-weight: 400;
+    margin: 0;
+    margin-bottom: 20px;
+    color: #ccc;
+    letter-spacing: 0.5px;
+}
+.srch-mod__title:last-child{ letter-spacing: -0.5px; }
+
+.srch-mod__title::first-letter{ font-size: 1.5em; }
+
+
+.srch-mod-google > .srch-mod__title::first-letter{ color: #6b0200; }
+.srch-mod-site > .srch-mod__title::first-letter{ color: #006b17; }
+.srch-mod-dict > .srch-mod__title::first-letter{ color: #002f6b; }
+
+
+
+
+/* 検索ワード・送信ボタン */
+.srch-mod__actions{
+    display: flex;
+    border-radius: 15px;
+    overflow: hidden;
+    font-size: 1.6rem;
+}
+
+.srch-mod__actions > input[type="text"]{
+    all: unset; /* 余計なデフォルトスタイルを全部リセット */
+    flex: 1;
+    padding: 8px 16px;
+    background: #cccccc url("https://www.transparenttextures.com/patterns/otis-redding.png") repeat center;
+    outline: none;
+    max-width: 850px;
+}
+
+.srch-mod__actions > input[type="submit"]{
+    padding: 8px 16px;
+    border: none;
+    border-radius: 0 15px 15px 0;
+    cursor: pointer;
+    letter-spacing: 2px;
+    transition: 0.15 all;
+    border-left: 1px solid #000;
+}
+
+.srch-mod__actions > input[type="submit"]:last-child{
+    margin-right: -2px; /* letter-spacingが最後の文字にも適用されてしまうので対策 */
+}
+
+/* Google Search */
+.srch-mod-google .srch-mod__actions > input[type="submit"]{
+    background: #6b0200 url("./images/6b0200_noise40.svg") repeat center center;
+    color: #cccccc;
+    transition: 0.15s all;
+}
+.srch-mod .srch-mod__actions > input[type="submit"]:hover{ opacity: 0.9;}
+
+
+/* Site Search */
+.srch-mod-site .srch-mod__actions > input[type="submit"]{
+    background: #006b17 url("https://www.transparenttextures.com/patterns/otis-redding.png") repeat center;
+    color: #cccccc;
+}
+/* Dict Search */
+.srch-mod-dict .srch-mod__actions > input[type="submit"]{
+    background: #002f6b url("./images/002f6b_noise40.svg") repeat center center;
+    color: #cccccc;
+}
+
+
+
+
+
+
+
+/* ラジオボタン・label */
+.srch-mod__choices{
+}
+
+.srch-mod__choices > input[type="radio"]{
+}
+
+
+.srch-mod__choices > label,
+.srch-mod__choices > div > label,
+.srch-mod-google .srch-mod__choices div label{
+    display: inline-block;
+    padding: 8px 16px;
+    margin: 20px 20px 0 0;
+    border-radius: 5px;
+    background: #cccccc url("https://www.transparenttextures.com/patterns/otis-redding.png") repeat center;
+    color: #202020;
+    transition: 0.15s all;
+}
+
+
+/* Google Search */
+.srch-mod-google .srch-mod__choices > label:hover,
+.srch-mod-google .srch-mod__choices > input[type="radio"]:checked + label,
+.srch-mod-google .srch-mod__choices div > label:hover,
+.srch-mod-google .srch-mod__choices div > input[type="radio"]:checked + label{
+    background: #6b0200 url("./images/6b0200_noise40.svg") repeat center;
+    color: #cccccc;
+}
+
+.srch-mod-google .srch-mod__choices > details{
+    margin-top: 20px;
+}
+
+.srch-mod-google .srch-mod__choices > details > summary{
+    cursor: pointer;
+    color: #ccc;
+}
+
+
+.srch-mod-google .srch-mod__choices div{
+}
+
+
+
+/* Site Search */
+.srch-mod-site .srch-mod__choices > div > label:hover,
+.srch-mod-site .srch-mod__choices > div > input[type="radio"]:checked + label{
+    background: #006b17 url("./images/006b17_noise40.svg") repeat center;
+    color: #cccccc;
+}
+
+/* Dict Search */
+.srch-mod-dict .srch-mod__choices > div > label:hover,
+.srch-mod-dict .srch-mod__choices > div > input[type="radio"]:checked + label{
+    background: #002f6b url("./images/002f6b_noise40.svg") repeat center;
+    color: #cccccc;
+}
