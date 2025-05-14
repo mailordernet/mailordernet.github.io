@@ -68,7 +68,7 @@ body{
     padding: 8px 16px;
     background: #cccccc url("https://www.transparenttextures.com/patterns/otis-redding.png") repeat center;
     outline: none;
-    max-width: 850px;
+/*     max-width: 850px; */
 }
 
 .srch-mod__actions > input[type="submit"]{
