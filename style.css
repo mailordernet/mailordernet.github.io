@@ -12,7 +12,7 @@ body{
 }
 
 .wrapper{
-
+    width: 100%;
 }
 .container{
     border-radius: 5px;
