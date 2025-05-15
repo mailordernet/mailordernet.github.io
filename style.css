@@ -6,6 +6,8 @@ html{
 
 body{
     font-family: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', sans-serif;
+    font-weight: 400;
+    font-style: normal;
     font-size: 1.6rem;
     color: #202020;
     background: #202020 url("https://www.transparenttextures.com/patterns/carbon-fibre.png") repeat center;
