@@ -2,12 +2,12 @@ input[type=radio]{ display:none; }/* ラジオボタンを非表示 */
 
 html{
     font-size: 62.5%; /* ← 16px × 62.5% = 10px */
-    font-family: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', sans-serif;
-    color: #202020;
 }
 
 body{
+    font-family: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', sans-serif;
     font-size: 1.6rem;
+    color: #202020;
     background: #202020 url("https://www.transparenttextures.com/patterns/carbon-fibre.png") repeat center;
 }
 
