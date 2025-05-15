@@ -38,16 +38,18 @@ body{
 
 /* タイトル */
 .srch-mod__title{
+    font-family: "Tomorrow", sans-serif;
+    font-weight: 500;
+    font-style: normal;
     font-size: 2.0rem;
-    font-weight: 400;
     margin: 0;
     margin-bottom: 20px;
     color: #ccc;
-    letter-spacing: 0.5px;
 }
-.srch-mod__title:last-child{ letter-spacing: -0.5px; }
 
 .srch-mod__title::first-letter{ font-size: 1.5em; }
+
+.srch-mod__title > span{ vertical-align:-2px }
 
 .srch-mod-google > .srch-mod__title::first-letter{ color: #6b0200; }
 .srch-mod-site > .srch-mod__title::first-letter{ color: #006b17; }
