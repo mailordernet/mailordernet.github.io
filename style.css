@@ -49,13 +49,50 @@ body{
     color: #ccc;
 }
 
-.srch-mod__title::first-letter{ font-size: 1.5em; }
+.srch-mod__title::first-letter{ font-size: 2.8rem; }
 
 .srch-mod__title > span{ vertical-align:-2px }
 
 .srch-mod-google > .srch-mod__title::first-letter{ color: #6b0200; }
 .srch-mod-site > .srch-mod__title::first-letter{ color: #006b17; }
 .srch-mod-dict > .srch-mod__title::first-letter{ color: #002f6b; }
+
+
+
+
+/* tamtshi */
+.srch-mod__title{
+    padding-bottom: 20px;
+    position: relative;
+    display: inline-block;
+}
+
+.srch-mod__title:before,
+.srch-mod__title:after{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    content: '';
+}
+
+.srch-mod__title:after{
+    border-bottom: 3px solid #cccccc;
+    width: 50%;
+}
+
+.srch-mod-google .srch-mod__title:before{
+    border-bottom: 3px solid #6b0200;
+}
+
+.srch-mod-site .srch-mod__title:before{
+    border-bottom: 3px solid #006b17;
+}
+.srch-mod-dict .srch-mod__title:before{
+    border-bottom: 3px solid #002f6b;
+}
+
+
+
 
 
 /* 検索ワード・送信ボタン */
@@ -114,6 +151,18 @@ body{
 .srch-mod__choices{
 }
 
+.srch-mod__choices__title{
+    display:inline-block;
+    margin: 0;
+    margin-top: 20px;
+    padding: 8px 16px;
+    border-radius: 5px;
+    color: #cccccc;
+    background: rgba(0, 0, 0, 0.3);
+    font-weight: 400;
+}
+
+
 .srch-mod__choices > input[type="radio"]{
 }
 
@@ -121,9 +170,9 @@ body{
 .srch-mod__choices > div > label,
 .srch-mod-google .srch-mod__choices div label{
     display: inline-block;
-    padding: 8px 16px;
     margin-top: 20px;
     margin-right: 20px;
+    padding: 8px 16px;
     border-radius: 5px;
     background: #cccccc url("https://www.transparenttextures.com/patterns/otis-redding.png") repeat center;
     color: #202020;
